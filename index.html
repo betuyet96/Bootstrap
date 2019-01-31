@@ -1,0 +1,167 @@
+<!-- Check GG notes for extra info 
+  Based on: https://www.taniarascia.com/what-is-bootstrap-and-how-do-i-use-it/-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The meta name="viewport" tag is particularly important for responsive design 
+        – it ensures that your website has a 1:1 ratio with the viewport (screen size). -->
+
+    <title>Bootstrap 101 Template</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- All you have to do is add the font stylesheet to your head and change the font-family of your desired element. -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+    <!-- In the first line, I’m defining the entire bar as a navbar, 
+        choosing a dark color scheme with navbar-inverse, 
+        and electing to use navbar-static-top, as opposed to a fixed (sticky) header. -->
+
+            <div class="container">
+            <!-- A container sets a max-width on the content within your full-width navbar. -->
+
+                <div class="navbar-header">
+                <!-- The navbar-header class contains the “brand” information, 
+                    where you can put your logo or company name.  -->
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!--class and data-toggle specify collapsed navbar
+                        data-target to the id below,
+                        (i.e. when content gets hidden (removed from the DOM or set to display:none via CSS), 
+                        aria-expanded is set to false) 
+                        all making the navbar a hamburger line
+                        https://getbootstrap.com/docs/4.0/components/collapse/
+                        https://www.w3schools.com/bootstrap/bootstrap_ref_js_collapse.asp
+                        -->
+                        <span class="sr-only">Toggle navigation</span>
+                        <!-- sr-only is used to hide information intended only for screen readers-
+                        This is hidden, but will be read outloud for the accessibility-->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- The button is hidden on small screen, and becomes a dropdown hamburger menu on 
+                        mobile (each <span class="icon-bar"> is a line in the hamburger).
+                        We should hide the navigation bar; and only show it when it is needed. -->
+
+                    <a class="navbar-brand" href="#">Balance Web Development</a>
+                    <!-- Brand name/logo-->
+                </div>
+
+
+
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- With the id, the button can collapse -->
+
+                    <ul class="nav navbar-nav navbar-right">
+                    <!-- nav navbar-nav is for creating unordered list I guess,
+                    navbar-right is for right-aligned -->
+                        <li><a href="#">About</a></li>
+
+                        <li class="dropdown">
+                            <!--Be sure to add the class collapse to the collapsible element -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                            aria-haspopup="true" aria-expanded="false">Services
+                            <span class="caret"></span>
+                            </a>
+                            <!-- class ="dropdown-toggle" for the menu header
+                            Aria-haspopup=”true”, indicates that popup is menu (not entirely necessary) -->
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Consulting</a></li>
+                            </ul>
+                            <!-- class ="dropdown-menu" for the menu list-->
+                        </li>
+
+                        <li><a href="#">Contact</a></li>
+                    <!-- 3 spans above = 3 <li> -->
+                    </ul>
+                </div>
+            </div>
+            <!-- The rest of the code is a right-aligned unordered list that 
+                servers as both our desktop and mobile menu.-->
+    </nav>
+
+
+
+
+    <div class="jumbotron">
+    <!--I decided I want one of those big, space-wasting, attention-grabbing headers, 
+        which is called a jumbotron in Bootstrap terms =))))))) -->
+            <div class="container">
+            <!-- Rows must be placed within a .container (fixed-width) or 
+                .container-fluid (full-width) for proper alignment and padding
+                Bootstrap Grid: https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp -->
+                <h1>Ready. Set. Code.</h1>
+                <p>Are you ready to boilerstrap your cross-compatible buzzword? We're Sassy, flat and semantic, so what are you waiting for?</p>
+                <br>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> 
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a>
+                </p>
+                <!-- Buttons in Bootstrap: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+            </div>
+    </div>
+
+
+    <section class="call-to-action">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                            <span class="glyphicon glyphicon-cloud glyphicon-large" aria-hidden="true"></span>
+                        <!--I’ve also added in a few glyphicons for decoration. Glyphicons is the built-in icon set that comes with Bootstrap. 
+                            If you don’t load your fonts, or if you move them to a different directory, these icons won’t work. 
+                            Glyphicons here:
+                            https://getbootstrap.com/docs/3.3/components/-->
+                        <!-- The aria-hidden property tells screen-readers if they should ignore the element.
+                        If an element is only visible after some user action, authors MUST set the aria-hidden attribute to true. -->
+                        <h3>Cloud Computable</h3>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-floppy-disk glyphicon-large" aria-hidden="true"></span>
+                        <h3>Backwards Compatible</h3>
+                        <p>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor.</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-console glyphicon-large" aria-hidden="true"></span>
+                        <!-- Added Glyphicon - large
+                        Seems like you can have more than 1 class -->
+                        <h3>GUI Free</h3>
+                        <p>Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    </div>
+                </div>
+        </div>
+        <!--Bootstrap works on a 12-column system, so as long as you add up to 12, you’re golden.
+        Here you can see I have three four-of-twelve columns, and as 3 x 4 = 12, everything works out. -->
+    </section>
+
+  
+    <!-- Back in my HTML, I’m going to wrap a section tag around my grid, 
+        (right above the class ="container" of grid)and call it call-to-action. 
+        I’m also going to create glyphicon-large class in CSS and add it to each icon span in HTML.-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap JavaScript and custom JavaScript must go below jQuery to function!  -->
+
+  </body>
+</html>

@@ -1,0 +1,97 @@
+.navbar {
+	margin-bottom: 0;
+}
+/*First, I’m going to get rid of that pesky space between 
+the navbar and the jumbotron.*/
+
+body {
+	background: #3E4649;
+	color: #f7f7f7;
+	font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2 {
+	font-weight: bold;
+}
+p {
+	font-size: 16px;
+	color: #cdcdcd;
+}
+
+/* I’m loading in the Montserrat font on the entire page, 
+I’ve made the headers bold, 
+and I’ve made the background dark and the text light.*/
+
+.jumbotron {
+	background: rgb(0, 153, 255);
+	color: white;
+	text-align: center;
+}
+.jumbotron p {
+	color: white;
+	font-size: 26px;
+}
+
+/* I’m going to make the jumbotron green and centered.*/
+
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+}
+.btn-primary:hover {
+	color: rgb(0, 153, 255);
+	background-color: white;
+	border-color: white;
+}
+
+/*I’m going to turn the buttons into “ghost buttons”, 
+which are buttons that are transparent with a border. 
+I’m also adding a margin so they’ll stack properly on mobile.*/
+
+.navbar-inverse {
+	background: #2E2F31;
+	border: 0;
+}
+.navbar-inverse .navbar-nav li a {
+	color: #f7f7f7;
+	font-size: 16px;
+}
+.navbar-inverse .navbar-nav li a:hover {
+	background: rgb(0, 153, 255);
+}
+
+/*I’m going to make the navbar a different shade of dark, 
+make the links lighter, and change the background color on hover.*/
+
+.dropdown-menu {
+	background: #2E2F31;
+	border-radius: 0;
+	border: 0;
+}
+.dropdown-menu li a {
+	padding: 10px;
+}
+.navbar-inverse .navbar-nav .dropdown-menu li a:hover {
+	background: #2C463C;
+}
+
+/*The dropdown menu has its own classes, 
+so I’m also going to change the background 
+color on these and add a little padding.*/
+
+.call-to-action {
+	text-align: center;
+}
+.call-to-action p {
+	margin-bottom: 30px;
+	font-family: sans-serif;
+}
+.glyphicon-large {
+	font-size: 50px;
+}
+
+/*The final touches to my code are going to be centering the bottom call-out, 
+adding margin-bottom to the p tags so they stack properly on mobile, 
+and making my glyphicons bigger. */
